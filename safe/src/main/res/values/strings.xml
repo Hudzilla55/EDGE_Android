@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EDGE Safe</string>
+    <string name="app_label">SafeApp</string>
+    <string name="appPrefsName">edge_safe_prefs</string>
+    <string name="poweredBy">Powered By HealthSaaS IoT Platform&#8482;</string>
+    <string name="permission_required">Permission Required.</string>
+    <string name="permission_reason_state">In order to read the IMEI we need access to your phone state.</string>
+    <string name="permission_reason_read_files">In order to read the tablet specific Settings we need access to your file system.</string>
+</resources>

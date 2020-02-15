@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="net.healthsaas.medwell.MainActivity" >
+    <item android:id="@+id/action_home"
+        android:title="@string/action_home"
+        android:visible="true"
+        android:orderInCategory="10"
+        android:showAsAction="never"
+        />
+    <item android:id="@+id/action_settings_scan"
+        android:title="@string/action_settings_scan"
+        android:visible="false"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        />
+    <item
+        android:id="@+id/action_settings_remove"
+        android:orderInCategory="200"
+        android:showAsAction="never"
+        android:title="@string/action_settings_remove"
+        android:visible="false" />
+    <item android:id="@+id/action_settings_restart"
+        android:title="@string/action_settings_restart"
+        android:orderInCategory="400"
+        android:visible="true"
+        android:showAsAction="never"
+        />
+</menu>

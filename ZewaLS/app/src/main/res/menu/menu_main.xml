@@ -1,0 +1,55 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="net.healthsaas.medwell.MainActivity" >
+    <item android:id="@+id/action_home"
+        android:title="@string/action_home"
+        android:visible="true"
+        android:orderInCategory="10"
+        android:showAsAction="never"
+        />
+    <item
+        android:id="@+id/action_settings_remove_AT"
+        android:orderInCategory="210"
+        android:showAsAction="never"
+        android:title="@string/action_settings_remove_AT"
+        android:visible="false" />
+    <item android:id="@+id/action_settings_scan_AT"
+        android:title="@string/action_settings_scan_AT"
+        android:visible="false"
+        android:orderInCategory="110"
+        android:showAsAction="never"
+        />
+    <item
+        android:id="@+id/action_settings_remove_BP"
+        android:orderInCategory="200"
+        android:showAsAction="never"
+        android:title="@string/action_settings_remove_BP"
+        android:visible="false"
+        />
+    <item android:id="@+id/action_settings_scan_BP"
+        android:title="@string/action_settings_scan_BP"
+        android:orderInCategory="100"
+        android:visible="false"
+        android:showAsAction="never"
+        />
+    <item
+        android:id="@+id/action_settings_remove_WT"
+        android:orderInCategory="210"
+        android:showAsAction="never"
+        android:title="@string/action_settings_remove_WT"
+        android:visible="false"
+        />
+    <item android:id="@+id/action_settings_scan_WT"
+        android:title="@string/action_settings_scan_WT"
+        android:orderInCategory="110"
+        android:visible="false"
+        android:showAsAction="never"
+        />
+    <item android:id="@+id/action_settings_restart"
+        android:title="@string/action_settings_restart"
+        android:orderInCategory="400"
+        android:visible="true"
+        android:showAsAction="never"
+        />
+</menu>

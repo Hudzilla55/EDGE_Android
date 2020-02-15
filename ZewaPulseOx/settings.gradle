@@ -1,0 +1,3 @@
+include ':app', ':safe'
+project(':safe').projectDir = new File(settingsDir, '../safe')
+

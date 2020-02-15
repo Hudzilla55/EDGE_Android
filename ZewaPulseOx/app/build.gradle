@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+// Put AppSpector plugin after Android plugin
+//apply plugin: 'com.appspector.sdk'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'zewa'
+            keyPassword 'ZewaMHC'
+            storeFile file('C:\\Users\\pdxae\\OneDrive\\Shared favorites\\Droid_Dev\\keystore\\keyStoreZewaMedWell.jks')
+            storePassword 'ZewaMHC'
+        }
+    }
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        applicationId "com.healthsaas.zewapulseox"
+        buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
+
+        versionCode 96
+        versionName="2.9.6"
+
+        minSdkVersion 23
+        targetSdkVersion 26
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_7
+            targetCompatibility JavaVersion.VERSION_1_7
+        }
+        signingConfig signingConfigs.config
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.config
+        }
+    }
+    flavorDimensions 'branding'
+    productFlavors {
+        mhc {
+            dimension = 'branding'
+            buildConfigField "String", "rootURL", "\"https://www.myhealthconnected.net/ws/austonio/\""
+            versionNameSuffix = '-mhc'
+        }
+        och {
+            dimension = 'branding'
+            buildConfigField "String", "rootURL", "\"https://demo.ourconnectedhealth.com/ws/austonio/\""
+            versionNameSuffix = '-och'
+        }
+    }
+}
+
+// Add AppSpector maven repository
+repositories {
+    maven {
+        url "https://maven.appspector.com/artifactory/android-sdk"
+    }
+}
+
+dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    //implementation project(':datasdk_2.9')
+    implementation project(':safe')
+    //implementation "com.appspector:android-sdk:1.+"
+}
